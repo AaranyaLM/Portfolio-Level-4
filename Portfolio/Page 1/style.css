@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    padding: 0; 
+    font-family: 'Mulish', sans-serif;
+}
+.header{
+    background-color: #000000;
+    color: white;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.navigation a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;  
+    font-size: 20px;
+    transition: all 0.2s;
+}
+.navigation a:hover{
+    color: rgb(204, 0, 0);
+}
