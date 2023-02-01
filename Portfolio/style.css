@@ -4,29 +4,33 @@ body{
     font-family: 'Mulish', sans-serif;
     background-color: #000000;  
 }
+
+/*All common*/
 .header{
     background-color: #000000;
     color: white;
     padding: 40px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 150px;
 }
 .navigation a{
     text-decoration: none;
-    color: white;
+    color: rgb(109, 109, 109);
     padding: 15px;  
-    font-size: 20px;
+    font-size: 18px;
     transition: all 0.2s;
 }
 .navigation a:hover{
-    color: rgb(204, 0, 0);
+    color: rgb(255, 255, 255);
+    border-bottom:  0.5px solid;
 }
+
+/*index*/
 .name{
     font-size: 90px;
     color: white;
     text-align: center;
-    position: relative;
-    top: 150px;
     transition: all 0.4s;
     margin-bottom: 40px;
 }
@@ -34,16 +38,15 @@ body{
     font-size: 130px;
     cursor: pointer ;
     color: rgb(87, 0, 0);
-    
 }
-
 .welcome{
     color: white;
     text-align: center;
-    position: relative;
-    top: 200px;
     font-size: 20px;
     font-weight: bolder;
     word-spacing: 0.6em;
     letter-spacing: 0.3em;  
+}
+.welcome:hover{
+    cursor: pointer;
 }
