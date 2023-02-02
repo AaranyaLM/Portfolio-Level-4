@@ -24,7 +24,6 @@ body{
     padding: 40px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 110px;
 }
 .logo{
     font-size: 30px;
@@ -40,25 +39,32 @@ body{
 }
 .navigation a:hover{
     color: rgb(255, 255, 255);
-    border-bottom:  0.5px solid;
+    border-bottom:  0.5px solid white;
 }
-    /*.icon-container{
-        display: flex;
-        justify-content: space-around;
-    }
-    .find{
-        color: white;
-    }
-    .fa{
-
-        left: 50%;
-        bottom: 20px;
-        size: 20px;
-        text-decoration: none;
-        color: white;
-        text-align: center;
-        font-size: 100px;
-    }*/
+.footer{
+    text-align: center;
+}
+.footer h4{
+    color: white;
+    letter-spacing: 5px;
+}
+.fa{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 20px;
+    margin-bottom: 50px;
+    transition:all 0.4s;
+}
+.fa.fa-instagram:hover {
+    color: transparent;
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background: -webkit-radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+.fa.fa-linkedin:hover{
+    color:#0A66C2;
+}
 
 /*index*/
 .name{
@@ -66,6 +72,7 @@ body{
     color: white;
     text-align: center;
     transition: all 0.4s;
+    margin-top: 130px;
     margin-bottom: 40px;
 }
 .name:hover{
@@ -80,7 +87,7 @@ body{
     font-weight: bolder;
     word-spacing: 0.6em;
     letter-spacing: 0.3em;  
-    margin-bottom: 14%;
+    margin-bottom: 300px;
 }
 .welcome:hover{
     cursor: pointer;
@@ -91,6 +98,7 @@ body{
     color: white;
     letter-spacing: 2px;
     text-align: center;
+    margin-top: 130px;
     margin-bottom: 80px;
     font-size: 20px;
 }
