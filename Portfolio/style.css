@@ -4,7 +4,19 @@ body{
     font-family: 'Mulish', sans-serif;
     background-color: #000000;  
 }
-
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: #363636;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #161616;
+    transition: all 0.4s;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #111111;
+}
 /*All common*/
 .header{
     background-color: #000000;
@@ -12,7 +24,12 @@ body{
     padding: 40px;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 150px;
+    margin-bottom: 110px;
+}
+.logo{
+    font-size: 30px;
+    color:rgb(255, 255, 255);
+    letter-spacing: -0.6em;
 }
 .navigation a{
     text-decoration: none;
@@ -25,6 +42,23 @@ body{
     color: rgb(255, 255, 255);
     border-bottom:  0.5px solid;
 }
+    /*.icon-container{
+        display: flex;
+        justify-content: space-around;
+    }
+    .find{
+        color: white;
+    }
+    .fa{
+
+        left: 50%;
+        bottom: 20px;
+        size: 20px;
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        font-size: 100px;
+    }*/
 
 /*index*/
 .name{
@@ -46,24 +80,30 @@ body{
     font-weight: bolder;
     word-spacing: 0.6em;
     letter-spacing: 0.3em;  
+    margin-bottom: 14%;
 }
 .welcome:hover{
     cursor: pointer;
 }
 
 /*projects*/
+.paragraph{
+    color: white;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 80px;
+    font-size: 20px;
+}
 .buttons{
     display: flex;
     justify-content: center;
 }
-.buttons button {
+.buttons button{
     background-color: #000000;
     border:2px solid white;
-    color: white;
     font-size: 30px;
     padding: 20px;
-    margin:50px;
-    border-radius: 100px;
+    border-radius: 0px;
     transition: all 0.4s;
 }
 .buttons button:hover{
@@ -71,10 +111,13 @@ body{
     color: black;
     cursor: pointer;
 }
-.paragraph{
+.buttons a{
+    text-decoration: none;
     color: white;
-    letter-spacing: 2px;
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 20px;
 }
+
+.second-container{
+    margin-top: 500px;
+    background-color: white;
+}
+
