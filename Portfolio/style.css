@@ -132,7 +132,10 @@ body{
     padding: 50px;
     letter-spacing: 0.3em;  
     text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
+
 .second-container{
     margin-top: 300px;
     background-color: white;
@@ -148,6 +151,7 @@ body{
     background-color: rgb(0, 0, 0);
     color: white;
 }
+
 .picture-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -166,6 +170,7 @@ body{
     letter-spacing: 0.2em;
     font-size: 20px;
 }
+
 .go-to-top{
     padding: 20px;
 }
@@ -175,4 +180,40 @@ body{
     font-weight: bolder;
     font-size: small;
     letter-spacing: 0.2em;
+}
+
+.java-project{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 50px;
+}
+.java-project-content{
+    margin-left: 50px;
+}
+.java-project-title{
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 25px;
+}
+.java-content-paragraph{
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    margin-bottom: 25px;
+}
+.java-project-picture img{
+    height: 200px;
+    width: 300px;
+}
+.view-java-content .fa{
+    padding: 10px;
+    color: #000000;
+    letter-spacing: 0.1em;
+    border:2px solid #000000;
+    border-radius: 50px;
+}
+.view-java-content .fa:hover{
+    cursor: pointer;
 }

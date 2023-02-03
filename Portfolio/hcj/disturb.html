@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Disturb The Ball</title>
+
+    </head>
+    <body>
+        <style>
+            body{
+                background: rgb(255, 251, 244);
+            }
+            .speed{
+                padding: 5px 10px;
+                background: transparent;
+                border: 1px solid rgb(5, 5, 5);
+                border-radius: 30px;
+                outline: none;
+                cursor: pointer;
+
+            }
+        </style>
+
+        <button class="speed" onclick="speed()">Disturb the ball - The Button </button>
+        <button class="speed" onclick="size1()"style="float: right;">+Ball size </button>
+        <button class="speed" onclick="size2()" style="float: right;">-Ball size </button>
+        <button class="speed" onclick="speed2()" >Disturb the ball- Button Number 2</button>
+        <button class="speed" onclick="speed3()">Disturb the ball- Button Number 280</button>
+        <button class="speed" onclick="speed4()" >Disturb the ball button but with right button</button>
+
+        <canvas id='canvas1'width='1346' height='586' style="border:1px solid #000000;"></canvas>
+
+        <script>
+            var canvas;
+            var canvasContext;
+            var ballx=50;
+            var bally=50;
+            var ballxSpeed= 10;
+            var ballySpeed= 5;
+            var ballsize= 50;
+
+    
+            window.onload= function(){
+                canvas=document.getElementById('canvas1');
+                canvasContext= canvas.getContext('2d');
+                var framesPerSecond= 60;
+                setInterval(returnBoth, 1000/framesPerSecond);
+                
+            }
+
+            function returnBoth(){
+                drawEverything();
+                moveEverything();
+            }
+
+            function drawEverything(){
+
+                canvasContext.fillStyle= 'black'; //fills out black acreen
+                canvasContext.fillRect(0,0,canvas.width,canvas.height);
+
+
+                canvasContext.fillStyle= 'red'; //ball
+                canvasContext.beginPath();
+                canvasContext.arc(ballx, bally,ballsize,0, Math.PI*2, true);
+                canvasContext.fill();
+            }
+            
+            function speed(){
+                ballx=ballx+130;
+                bally=bally+50;
+            }
+            function speed2(){
+                ballx=ballx-130;
+                bally=bally-50;
+            }
+            function speed3(){
+                ballxSpeed= ballxSpeed+5;
+                ballySpeed= ballySpeed+3;
+            }
+            function speed4(){
+                ballxSpeed= ballxSpeed-5;
+                ballySpeed= ballySpeed-3;
+            }
+            function size1(){
+                ballsize= ballsize+5;
+            } 
+            function size2(){
+                ballsize= ballsize-5;
+            }
+
+            function moveEverything(){
+                ballx= ballx+ ballxSpeed;
+                bally= bally+ ballySpeed;
+
+                if (ballx<0){
+                    ballxSpeed=-ballxSpeed;
+                }
+
+                if(ballx>canvas.width){
+                    ballxSpeed=-ballxSpeed;
+                }
+
+                if (bally<0){
+                    ballySpeed=-ballySpeed;
+                }
+
+                if(bally>canvas.height){
+                    ballySpeed=-ballySpeed;
+                }
+                if(ballx>1400 || ballx<-30){
+                    ballx= canvas.width/2;
+
+                }
+                if (bally> 620 || bally<-30){
+                    bally= canvas.height/2;
+                }
+            }
+        </script>
+  
+    </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tennis</title>
+        <link rel="icon" href="https://www.freepnglogos.com/uploads/tennis-png/tennis-session-training-usi-weston-8.png">
+    </head>
+    <body>
+        
+        <!--canvas-->
+        <canvas id="gameCanvas" width="1345" height="610" style="border:1px solid #000000;"></canvas>
+        <script>
+            var canvas;
+            var canvasContext;
+            var ballx=50; // ball posi x axis
+            var bally=50; // ball posi y axis
+            var ballxSpeed= 11;
+            var ballySpeed=6;
+
+            var playerScore=0;
+            var playerHealth=3;
+            const playerLoosingHealth=-1;
+
+            var playerY= 250;
+            const PLAYER_HEIGHT= 100;
+
+            var showingLoseScreen= false;
+
+            function calculateMousePos(evt) {           // mouse posi detector
+    	        var rect = canvas.getBoundingClientRect();
+               	var root = document.documentElement;
+               	var mouseX = evt.clientX - rect.left - root.scrollLeft;
+               	var mouseY = evt.clientY - rect.top - root.scrollTop;
+        	    return {
+	            	x:mouseX,
+	             	y:mouseY
+	            };
+            }
+
+            function mouseClick(){
+                if(showingLoseScreen){
+                    playerHealth=3;
+                    playerScore=0;
+                    showingLoseScreen=false;
+                }
+            }
+
+            window.onload= function(){
+                canvas= document.getElementById('gameCanvas');
+                canvasContext= canvas.getContext('2d');
+                
+                var framesPerSecond=60;
+                setInterval(returnBothFunctions, 1000/framesPerSecond); //Animation Speed
+
+                canvas.addEventListener('mousedown',mouseClick); //mouse click response
+
+                canvas.addEventListener('mousemove',         // mouse mover
+                function(evt) {
+                    var mousePos= calculateMousePos(evt);
+                    playerY= mousePos.y- (PLAYER_HEIGHT/2);
+                });
+               }
+
+            function ballReset(){
+                if(playerHealth==playerLoosingHealth){
+                    showingLoseScreen = true;
+                }
+                ballx= canvas.width/2
+                bally= canvas.height/2;
+                ballxSpeed= -ballxSpeed;
+            }
+
+            function returnBothFunctions(){
+                moveEverything();
+                drawEverything();
+            }
+
+            function moveEverything(){      // ball position mover
+                if(showingLoseScreen) {
+		            return;
+	            }
+
+                ballx= ballx+ballxSpeed;
+                bally= bally+ballySpeed;
+
+                if(ballx < 0){
+                    if(bally > playerY && bally < playerY+PLAYER_HEIGHT){
+                        ballxSpeed=-ballxSpeed;
+                        playerScore++;
+                        var dY= bally- (playerY + PLAYER_HEIGHT/2);
+                        ballySpeed= dY* 0.10;
+                    } 
+                    else{
+                        playerHealth--;
+                        ballReset();
+
+                    }
+                }
+                if(ballx > canvas.width){
+                    ballxSpeed= -ballxSpeed;
+                }
+
+                if(bally < 0){
+                    ballySpeed= -ballySpeed;
+                }
+                if(bally > canvas.height){
+                    ballySpeed= -ballySpeed;
+                }
+               
+               
+            }
+
+            function drawEverything(){
+                canvasContext.fillStyle= 'black'; //fills out black acreen
+                canvasContext.fillRect(0,0,canvas.width,canvas.height);
+
+                if(showingLoseScreen) {
+	            	canvasContext.fillStyle = 'white';
+	            	canvasContext.fillText("Click to continue, you lost Bozo", canvas.width/2-50,canvas.height/2);
+	            	return;
+	            }
+                canvasContext.fillStyle= 'white'; //left player 
+                canvasContext.fillRect(3,playerY,10,100);
+
+                canvasContext.fillStyle= 'red'; //ball
+                canvasContext.beginPath();
+                canvasContext.arc(ballx, bally,10,0, Math.PI*2, true);
+                canvasContext.fill();
+
+                canvasContext.fillStyle= 'green'
+                canvasContext.fillText('Score '+ playerScore,canvas.width/2-20,100);
+
+                canvasContext.fillStyle= 'red'
+                canvasContext.fillText('Health '+ playerHealth,canvas.width/2-20,200);
+            }
+        </script>
+    </body>
+</html>
