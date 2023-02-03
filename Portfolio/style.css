@@ -13,6 +13,7 @@ body{
 ::-webkit-scrollbar-thumb{
     background-color: #161616;
     transition: all 0.4s;
+    border-radius: 20px;
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: #111111;
@@ -119,13 +120,45 @@ body{
     color: black;
     cursor: pointer;
 }
+.buttons button:hover a{
+    color: black;
+}
 .buttons a{
     text-decoration: none;
     color: white;
 }
-
 .second-container{
-    margin-top: 500px;
+    margin-top: 300px;
     background-color: white;
 }
-
+.html-title{
+    padding: 50px;
+    letter-spacing: 0.3em;  
+    text-align: center;
+}
+.third-container{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.python-title{
+    padding: 50px;
+    letter-spacing: 0.3em;  
+    text-align: center;
+}
+.fourth-container{
+    background-color: rgb(255, 255, 255);
+}
+.java-title{
+    padding: 50px;
+    letter-spacing: 0.3em;  
+    text-align: center;
+}
+.fifth-container{
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+.ps-title{
+    padding: 50px;
+    letter-spacing: 0.3em;  
+    text-align: center;
+}
