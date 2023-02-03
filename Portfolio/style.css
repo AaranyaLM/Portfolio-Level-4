@@ -181,39 +181,73 @@ body{
     font-size: small;
     letter-spacing: 0.2em;
 }
-
-.java-project{
+.project-container{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.project{
     display: flex;
     justify-content: space-evenly;
     padding: 50px;
 }
-.java-project-content{
-    margin-left: 50px;
-}
-.java-project-title{
+.project-title{
     font-size: 20px;
     letter-spacing: 0.1em;
     font-weight: bold;
     text-align: left;
     margin-bottom: 25px;
 }
-.java-content-paragraph{
+.project-content{
+    margin-left: 50px;
+}
+.content-paragraph{
     font-size: 14px;
     letter-spacing: 0.1em;
     text-align: justify;
     margin-bottom: 25px;
+    line-height: 1.5;
 }
-.java-project-picture img{
+.project-picture img{
     height: 200px;
     width: 300px;
 }
-.view-java-content .fa{
+
+.view-content-white .fa{
     padding: 10px;
     color: #000000;
     letter-spacing: 0.1em;
     border:2px solid #000000;
     border-radius: 50px;
 }
-.view-java-content .fa:hover{
+.view-content-white .fa:hover{
     cursor: pointer;
+    background-color: #000000;
+    color: white;
+}
+.view-content-white .fa a{
+    color: inherit;
+    text-decoration: none;
+    
+}
+.download{
+    display: inline;
+    font-family: 'Mulish', sans-serif;
+}
+
+.view-content-black .fa{
+    padding: 10px;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    border:2px solid #ffffff;
+    border-radius: 50px;
+}
+.view-content-black .fa:hover{
+    cursor: pointer;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+.view-content-black .fa a{
+    color: inherit;
+    text-decoration: none;
+    
 }
