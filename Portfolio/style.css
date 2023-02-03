@@ -126,41 +126,27 @@ body{
 .buttons a{
     text-decoration: none;
     color: white;
+    letter-spacing: 0.1em;
+}
+.title{
+    padding: 50px;
+    letter-spacing: 0.3em;  
+    text-align: center;
 }
 .second-container{
     margin-top: 300px;
     background-color: white;
 }
-.html-title{
-    padding: 50px;
-    letter-spacing: 0.3em;  
-    text-align: center;
-}
 .third-container{
     background-color: rgb(0, 0, 0);
     color: white;
 }
-.python-title{
-    padding: 50px;
-    letter-spacing: 0.3em;  
-    text-align: center;
-}
 .fourth-container{
     background-color: rgb(255, 255, 255);
-}
-.java-title{
-    padding: 50px;
-    letter-spacing: 0.3em;  
-    text-align: center;
 }
 .fifth-container{
     background-color: rgb(0, 0, 0);
     color: white;
-}
-.ps-title{
-    padding: 50px;
-    letter-spacing: 0.3em;  
-    text-align: center;
 }
 .picture-container{
     display: grid;
