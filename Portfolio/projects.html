@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
+    <title>Projects | Projects</title>
+    <link rel="icon" href="logo.jpg">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="showcase.js"></script>
 </head>
 <body>
     <div class="content-container">
@@ -42,6 +44,84 @@
             <div class="title">
                 <h2>HTML/CSS/JAVASCRIPT</h2>
             </div>
+            <div class="project-container">
+                
+                <div class="project">
+                    <div class="project-picture">
+                        <img src="hcj/pingpong.jpg" alt="Ping Pong">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">
+                            Ping Pong
+                        </div>
+                        <div class="content-paragraph">
+                           This game was created using mainly Javascript. There is a ball, and there is the player(You).
+                           Control the bat on the left hand side of the screen using you mouse. There is a score counter, and a health counter.
+                           If the health counter goes below 0, you lose.
+                        </div>
+                        <div class="view-content-white">
+                            <i class="fa fa-gamepad" aria-hidden="true" >
+                                <a href="hcj/game.html" target="_blank"> 
+                                    <div class="download">
+                                        Play
+                                    </div> 
+                                </a>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <div class="project-picture">
+                        <canvas id="gameCanvas" width="300" height="200" style="border:1px solid #000000;"></canvas>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">
+                            Disturb the Ball
+                        </div>
+                        <div class="content-paragraph">
+                            Made solely because of boredom, this little game allows you to do as the title says. DISTUB THE BALL.
+                            As the ball moves and bounces back and forth, your job is to distub its course by clicking
+                            different buttons. Thats it!
+                        </div>
+                        <div class="view-content-white">
+                            <i class="fa fa-gamepad" aria-hidden="true" >
+                                <a href="hcj/disturb.html" target="_blank"> 
+                                    <div class="download">
+                                        Play
+                                    </div> 
+                                </a>
+                            </i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project">
+                <div class="project-picture">
+                    <img src="hcj/counter-pic.jpg" alt="Counter">
+                </div>
+                <div class="project-content">
+                    <div class="project-title">
+                        Counter
+                    </div>
+                    <div class="content-paragraph">
+                        This is a simple page made while I was in High School. Clicking "Increse" will increase the count, clicking
+                        "Decrease" will decrease the count, and clicking "Reset" will reset the counter to 0. If the number is positive,
+                        the counter will be Green, if negetive, it will be Red, if it is 0, it will be white.
+                    </div>
+                    <div class="view-content-white">
+                        <i class="fa fa-gamepad" aria-hidden="true" >
+                            <a href="hcj/counter/counter.html" target="_blank"> 
+                                <div class="download">
+                                    Check Out
+                                </div> 
+                            </a>
+                        </i>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             <div class="go-to-top">
                 <a href="#top">Go to Top </a>
@@ -71,7 +151,6 @@
                             is replaced with a letter corresponding to a certain number of letters shifted up or down the alphabet.
                             In this program, all you have to do is choose wether you want to encrypt or decrypt a message, along with the message and 
                             the shift value, and the program will crack the message for you! 
-                            value
                         </div>
                         <div class="view-content-black">
                             <i class="fa fa-arrow-down" aria-hidden="true" >
@@ -136,7 +215,8 @@
                         contains only a single element, then merges the sublists back together in a sorted 
                         manner. This results in a fully sorted list. Merge sort has a time complexity of 
                         O(n log n) and is a stable sort, meaning that the relative order of equal elements
-                        is preserved.
+                        is preserved. In this program, you can enter any amount of numbers you want, and the algorith will
+                        sort it out in ascending order. 
                     </div>
                     <div class="view-content-white">
                         <i class="fa fa-arrow-down" aria-hidden="true" >
