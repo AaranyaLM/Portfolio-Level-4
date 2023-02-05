@@ -262,3 +262,85 @@ body{
     display: inline;
     font-family: 'Mulish', sans-serif;
 }
+
+
+
+
+/*About*/
+.main-title h2{
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+.about-container{
+    font-size: 14px;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    padding: 20px;
+    margin: 30px;
+    text-align: justify;
+    line-height: 1.5;
+}
+.education-table table{
+    margin-top: 50px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ffffff ;
+}
+.education-table th,td{
+    padding: 10px 50px;
+}
+.education-table th{
+    color: black;
+    background-color: white;
+}
+.skills{
+    margin-top: 50px;
+    display: flex;
+
+}
+.cv{
+    margin: auto;
+}
+.cv .fa{
+    padding: 10px;
+    color: #ffffff;
+    letter-spacing: 0.1em;
+    border:2px solid #ffffff;
+    border-radius: 50px;
+}
+.cv .fa a{
+    color: inherit;
+    text-decoration: none;
+}
+.cv .fa:hover{
+    color: black;
+    background-color: #ffffff;
+}
+
+
+
+
+/*References*/
+.ref-title h2{
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+.references{
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    margin: 25px;
+    padding: 25px;
+    line-height: 2;
+    color: white;
+}
+.references a{
+    text-decoration: none;
+    color: white;
+}
