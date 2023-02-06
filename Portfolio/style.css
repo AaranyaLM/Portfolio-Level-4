@@ -525,7 +525,7 @@ body{
 
 /*Team*/
 .team-title{
-    font-size: 30px;
+    font-size: 25px;
     color: #ffffff;
     text-align: center;
     letter-spacing: 0.3em;
@@ -543,6 +543,10 @@ body{
 .fangs-logo img{
     height: 200px;
     width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  
 }
 
 .fangs-logo-name{
@@ -561,9 +565,39 @@ body{
 .member-title{
     letter-spacing: 0.3em;
     text-align: center;
+    margin-bottom: 100px;
+    font-size: 20px;
 }
+
 .members{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;
+    grid-row-gap: 60px;
+    margin-bottom: 100px;
+}
+.member-name{
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.member-name a{
+    text-decoration: none;
+    color: #ffffff;
+}
+.member-about{
+    text-align: center;
+}
+
+
+@media screen and (max-width: 900px){
+    .team-content-wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+    .members{
+        grid-template-columns: 1fr;
+    }
+    
 }
