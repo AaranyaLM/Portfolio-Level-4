@@ -21,7 +21,6 @@ body{
 
 
 
-
 /*All common*/
 .header{
     background-color: #000000;
@@ -110,9 +109,12 @@ body{
 }
 
 @media screen and (max-width: 900px){
+    .name{
+        font-size: 50px;
+    }
     .name:hover{
         color: white;
-        font-size: 90px;
+        font-size: 50px;
     }
 }
 
@@ -518,4 +520,50 @@ body{
 .contact-form .row input[type="submit"] {
     width: 100%;
 }
+}
+
+
+/*Team*/
+.team-title{
+    font-size: 30px;
+    color: #ffffff;
+    text-align: center;
+    letter-spacing: 0.3em;
+}
+
+.team-content-wrapper{
+    color: #ffffff;
+    margin: 25px;
+    padding: 25px;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    display: flex;
+}
+
+.fangs-logo img{
+    height: 200px;
+    width: 300px;
+}
+
+.fangs-logo-name{
+    text-align: center;
+}
+.team-intro{
+    margin-left: 25px;
+    text-align: justify;
+}
+.second-cont{
+    color: #ffffff ;
+    letter-spacing: 0.1em;
+    margin: 25px;
+    padding: 25px;
+}
+.member-title{
+    letter-spacing: 0.3em;
+    text-align: center;
+}
+.members{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
 }
